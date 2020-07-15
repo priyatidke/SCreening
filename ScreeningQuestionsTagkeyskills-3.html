@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="http://tinymce.cachefly.net/4/tinymce.min.js"></script>
+
+  <link rel="stylesheet" href="Tag-Input-With-Autocomplete-jQuery-Tagator/fm.tagator.jquery.css">
+<script src="Tag-Input-With-Autocomplete-jQuery-Tagator/fm.tagator.jquery.min.css"></script>
+<script src="Tag-Input-With-Autocomplete-jQuery-Tagator/fm.tagator.jquery.min.map"></script>
+
+
+<script src="Tag-Input-With-Autocomplete-jQuery-Tagator/fm.tagator.jquery.js"></script>
+<!--script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.js"></script-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"></script>
+
+
+ 
+
+ <!---<link rel="stylesheet"
+
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+
+      integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+
+      crossorigin="anonymous">
+
+<link href="Bootstrap-4-Tag-Input-Plugin-jQuery/tagsinput.css" rel="stylesheet" type="text/css">
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+
+        crossorigin="anonymous">
+
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+
+        integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+
+        crossorigin="anonymous">
+
+</script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+
+        integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+
+        crossorigin="anonymous">
+
+</script>
+
+                  <script src="Bootstrap-4-Tag-Input-Plugin-jQuery/tagsinput.js"></script>-->
+                  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://bootstrap-tagsinput.github.io/bootstrap-tagsinput/dist/bootstrap-tagsinput.css">
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://bootstrap-tagsinput.github.io/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+
+
+
+<style>
+  caption{
+  caption-side: top;
+}
+
+</style>  
+          
+</head>
+<body>
+<!-- Navigation bar start-->
+  <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <!-- Brand/logo -->
+    <a class="navbar-brand" href="#">
+      <img src="https://app.litmusblox.io/assets/images/logo-white.svg" alt="logo" style="width:150px;">
+    </a>
+
+    <!-- Links -->
+
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="https://litmusblox.io/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://40.114.1.146/ScreeningQuestions.html">Screening Questions</a>
+      </li>
+
+    </ul>
+  </nav></br>
+
+  <!-- Navigation bar End -->
+  <!-- Form start -->
+  <form>
+    <!-- 1st Input start -->
+    <div class="form-group">
+      <div class="container">
+        <h3>Screening Questions</h3>
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group">
+              
+<!-- <input id="example" name="example" value="jQuery,Script,Net" placeholder="Please input some tags">-->
+
+
+             <label for="jd">Job Title*</label>
+             <input type="text" class="form-control input-lg" id="jt" placeholder="Enter Job Title"></input><br>
+           </div>
+         </div>
+
+         <div class="col-6">
+          <label for="prof_ecm">Industry/Function*</label>
+          <input type="text" list="prof_k" class="form-control" name="prof_ecm" id="prof_ecm" placeholder="select" required="" oninvalid="this.setCustomValidity('Industry/Function cannot be empty')"
+          oninput="setCustomValidity('')" ></input>
+          <datalist id="prof_k">
+           <option value="IT">
+            <option value="Manufacturing">
+              <option value="Sales">
+                <option value="Engineering Projects">
+                </datalist>
+
+              </div>
+          <div class="col-6">
+            <div class="form-group">
+
+              <label for="jd">Job Description(MustHaveJD)*</label>
+              <textarea class="form-control input-lg" rows="6" id="jd" placeholder="Enter job description here" required=""></textarea><br>
+              <button type="submit" class="btn btn-primary" id="btkwrd">Show Keywords</button> 
+
+
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+
+              <label for="jdb">Job Description(NiceToHaveJD)*</label>
+              <textarea class="form-control input-lg" rows="6" id="jdb" placeholder="Enter job description here"></textarea><br>
+
+
+            </div>
+          </div>
+
+         
+<!-- 1st Input end -->
+<!-- 2nd Input start -->
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="keywords">Key Skills(MustHaveKeywords)</label><br>
+                 
+                 <input type="text" value=" " data-role="tagsinput" class="form-control input-lg" id="keywords" placeholder=" "></input><br><br>
+                 
+
+                  <button type="submit" class="btn btn-primary" id="btque">Show Questions</button><br>
+                </div>
+                  </div>
+                  <div class="col-6">
+                  <div class="form-group">
+                  <label for="keywordsb">Key Skills(NiceToHaveKeywords)</label><br>
+                  <input type="text" data-role="tagsinput" class="form-control input-lg" id="keywordsb" placeholder=" " ><br><br>
+                  
+                </div>
+                 </div>
+<!-- 2nd Input end -->
+ 
+<div class="col-6">
+  
+                <div class="form-group">
+
+                 <!-- <label for="questions">Screening Questions(MustHaveQuestions)</label>
+                <input type="text" class="form-control input-lg" id="questions" placeholder="Screening questions"> -->
+                 <div>
+<div class="table-responsive">
+                <div class="container" id="tbleshow" align="right">
+                  <table class="table table-striped">
+                    <caption>Screening Questions(MustHaveQuestions)</caption>
+                   <tr>
+                    <th>
+                      Keywords
+                    </th>
+                 <!-- <th> 
+                      Depth
+                    </th> -->
+                    <th>
+                      Questions
+                    </th>
+                    <th>
+                     Options
+                   </th>
+                 </tr>
+
+
+               </table>
+             </div>
+           </div>
+                </div>
+              </div>
+              </div>
+
+              <div class="col-6">
+
+                <div class="form-group">
+                  <!-- <label for="questions">Screening Questions(NiceToHaveQuestions)</label>
+                  <input type="text" class="form-control input-lg" id="questions" placeholder="Screening questions"> -->
+                 <div>
+                  <div class="table-responsive">
+                <div class="container" id="tbleshowb" align="right">
+                  <table class="table table-striped">
+                    <caption>Screening Questions(NiceToHaveQuestions)</caption>
+                   <tr>
+                    <th>
+                      Keywords
+                    </th>
+                  
+                    <th>
+                      Questions
+                    </th>
+                    <th>
+                     Options
+                   </th>
+                 </tr>
+
+
+               </table>
+             </div>
+           </div>
+                </div>
+              </div>
+<!-- Table start -->
+</div>
+            
+<!-- Table end -->
+         </form>
+<!-- Form end -->
+
+<!-- Code start -->
+
+         <script>
+
+
+$('.bootstrap-tagsinput input').blur(function(){
+  jQuery(this).attr('placeholder', '')
+})
+          ///------Keywords code start-----////
+          tinymce.init({selector:'#jd'}); //showing text formatting bars
+          tinymce.init({selector:'#jdb'}); //showing text formatting bars
+
+$("#tbleshowb").hide();
+          $("#tbleshow").hide();
+          $("#btkwrd").click(function() // button 1
+          {
+
+            var jdd = tinymce.get('jd').getContent({format: 'text'});//get content from tinymce textbox
+            var jddb = tinymce.get('jdb').getContent({format: 'text'});
+
+            //var jd=$("#jd").val();
+            var industryInputs=$("#prof_ecm").val();//input from textbox
+
+            var input="{\"mustHaveJD\": \"" +jdd+"\",\"niceToHaveJD\": \"" +jddb+"\",\"industry\": \""+industryInputs+"\",\"mode\":\"k\"}"; // json format input for keywords
+            //alert(input);
+
+
+            jQuery.support.cors= true;
+            $.ajax({
+              url:"https://6ukrj7o5yj.execute-api.ap-south-1.amazonaws.com/Prod/True", //url
+              type:"POST",
+              contentType:"application/json",
+              data: input,
+              dataType:"json",
+
+
+              success: function(resultdata)
+              {
+                alert("Done");
+               // alert(JSON.stringify(resultdata));
+$.each(resultdata.mustHaveKeywords.keywords, function(index, value) {
+    $('#keywords').tagsinput('add', value);
+    console.log(value);
+});
+$.each(resultdata.niceToHaveKeywords.keywords, function(indexb, valueb) {
+    $('#keywordsb').tagsinput('add', valueb);
+    console.log(valueb);
+});
+
+                //$("#keywords").val(resultdata.mustHaveKeywords.keywords);
+                //$("#keywordsb").val(resultdata.niceToHaveKeywords.keywords);// fetching keywords
+// fetching keywords
+              }
+
+            });
+
+          });
+///------Keywords code end-----////
+///------Questions code start-----////
+
+          $("#btque").click(function() // button 2
+          {
+           $("#tbleshow").show(); // Table show
+           $("#tbleshowb").show();
+
+           var industryInputss=$("#prof_ecm").val(); 
+
+
+           var keywd = $("#keywords").val(); 
+
+
+           var temp = keywd.split(",");//showing normal string eg. html,python
+
+           var body = JSON.stringify(temp); //showing json string eg. ["html","python"]
+
+
+           var keywdb = $("#keywordsb").val(); 
+
+
+           var tempb = keywdb.split(",");//showing normal string eg. html,python
+
+           var bodyb = JSON.stringify(tempb); //showing json string eg. ["html","python"]
+
+
+
+
+           var inputk="{\"mustHaveKeywords\": "+body+",\"niceToHaveKeywords\": "+bodyb+",\"industry\": \""+industryInputss+"\",\"mode\":\"q\"}";
+          // alert(inputk); // json format input for Questions
+
+
+  //console.log(input)
+  jQuery.support.cors= true;
+  $.ajax({
+    url:"https://6ukrj7o5yj.execute-api.ap-south-1.amazonaws.com/Prod/True", //both url are same
+    type:"POST",
+    contentType:"application/json",
+    data: inputk,
+    dataType:"json",
+    success: function(resultdatas)
+    {
+
+      alert("Done");
+      //alert(JSON.stringify(resultdatas));
+
+      $("#questions").val(JSON.stringify(resultdatas));
+
+      var values = []; //array initialisation for keywords
+
+      var keywds = $("#keywords").val();
+
+      var temps = keywds.split(",");
+
+
+      $.each(temps, function(key, value) {
+
+        values.push(value);
+
+      }); 
+
+//loop for each keywords
+      $.each(values, function(i,kw){
+
+//loop for deep questions 
+
+if(typeof resultdatas.mustHaveQuestions.screeningQuestions[kw] !== 'undefined'){
+ 
+        $.each(resultdatas.mustHaveQuestions.screeningQuestions[kw].questions,function(d,results){
+
+          var optionsList = "";//string for options , store comma seperated value
+
+          //loop for deep questions's options
+          $.each(results.options, function(k, v){ 
+
+            optionsList = optionsList + JSON.stringify(v) + ",";//add each option with comma seperated
+
+            
+          });
+          optionsList = optionsList.substring(0,(optionsList.length-1)).toString().replace(/"/g, "");//remove last comma and replace "".
+          
+          // table populate 
+
+          $("#tbleshow tbody").append(
+            "<tr>"
+            +"<td>"+kw+"</td>"
+            //+"<td>Deep</td>"
+            +"<td>"+results.question+"</td>"
+
+            +"<td>"+optionsList+"</td>"
+
+            +"</tr>" )
+
+        });
+
+}
+//loop for broad questions 
+      
+      });  
+
+
+var valuesb = []; //array initialisation for keywords
+
+      var keywdsb = $("#keywordsb").val();
+
+      var tempsb = keywdsb.split(",");
+
+
+      $.each(tempsb, function(keyb, valueb) {
+
+        valuesb.push(valueb);
+
+      }); 
+$.each(valuesb, function(ib,kwb){
+
+//loop for deep questions 
+if(typeof resultdatas.niceToHaveQuestions.screeningQuestions[kwb] !== 'undefined'){
+
+  //alert(resultdatas.niceToHaveQuestions.screeningQuestions[kwb]);
+        $.each(resultdatas.niceToHaveQuestions.screeningQuestions[kwb].questions,function(db,resultsb){
+
+          var optionsListb = "";//string for options , store comma seperated value
+
+          //loop for deep questions's options
+          $.each(resultsb.options, function(kb, vb){ 
+
+            optionsListb = optionsListb + JSON.stringify(vb) + ",";//add each option with comma seperated
+
+            
+          });
+          optionsListb = optionsListb.substring(0,(optionsListb.length-1)).toString().replace(/"/g, "");//remove last comma and replace "".
+          //alert(optionsListb);
+          // table populate 
+
+          $("#tbleshowb tbody").append(
+            "<tr>"
+            +"<td>"+kwb+"</td>"
+            //+"<td>Deep</td>"
+            +"<td>"+resultsb.question+"</td>"
+
+            +"<td>"+optionsListb+"</td>"
+
+            +"</tr>" )
+
+        });
+      }
+
+//loop for broad questions 
+      
+      });  
+
+
+    } 
+
+
+  });
+
+
+});
+          ///------Questions code end-----////
+
+</script>
+<!-- Code end -->
+
+
+</div>
+
+
+</body>
+</html>
